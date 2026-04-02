@@ -50,28 +50,28 @@ public class SchoolManagementSystem {
         input.close();
     }
     public static boolean login() {
-        Scanner input = new Scanner(System.in);
+        try (Scanner input = new Scanner(System.in)) {
+			String correctUsername = "ClaudeAboke";
+			String correctPassword = "Monday!1234";
 
-        String correctUsername = "ClaudeAboke";
-        String correctPassword = "Monday!1234";
+			int attempts = 3;
 
-        int attempts = 3;
+			while (attempts > 0) {
+			    System.out.print("Enter username: ");
+			    String username = input.nextLine();
 
-        while (attempts > 0) {
-            System.out.print("Enter username: ");
-            String username = input.nextLine();
+			    System.out.print("Enter password: ");
+			    String password = input.nextLine();
 
-            System.out.print("Enter password: ");
-            String password = input.nextLine();
-
-            if (username.equals(correctUsername) && password.equals(correctPassword)) {
-                System.out.println("Login successful!\n");
-                return true;
-            } else {
-                attempts--;
-                System.out.println("Wrong credentials. Attempts left: " + attempts);
-            }
-        }
+			    if (username.equals(correctUsername) && password.equals(correctPassword)) {
+			        System.out.println("Login successful!\n");
+			        return true;
+			    } else {
+			        attempts--;
+			        System.out.println("Wrong credentials. Attempts left: " + attempts);
+			    }
+			}
+		}
 
         return false;
     }
