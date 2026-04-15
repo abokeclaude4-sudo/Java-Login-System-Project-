@@ -1,16 +1,24 @@
-# Java Login System
+# Java Login System Project
 
-This project is a simple Java-based login system built using Eclipse IDE.
+## Description
+This project is a Java-based application that includes:
+- Login System
+- Grade Calculator
+- Basic Java programs
 
 ## Features
-- User login with username and password
-- 3 attempts limit
-- Menu after successful login
-- Console-based interaction
+- User input handling using Scanner
+- Grade calculation logic
+- Loop and validation implementation
 
 ## Technologies Used
 - Java
 - Eclipse IDE
+
+## How to Run
+1. Open the project in Eclipse
+2. Run the Java file (e.g., GradeCalculator.java)
+3. Follow the instructions in the console
 
 ## Author
 Claude Aboke
